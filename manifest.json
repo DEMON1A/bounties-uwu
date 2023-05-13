@@ -1,0 +1,30 @@
+{
+    "name": "Bounty UwU",
+    "version": "1.0.0",
+    "description": "Grab hidden bounties from hackerone api",
+    "manifest_version": 3,
+    "author": "Mohammed Dief (demonia)",
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "Bounties UwU",
+        "default_icon": {
+            "16": "assets/icons/icon_uwu.png",
+            "128": "assets/icons/icon_uwu.png"
+        }
+    },
+
+    "permissions": [
+        "tabs"
+    ],
+
+    "host_permissions": [
+        "https://hackerone.com/*"
+    ],
+
+    "content_scripts": [
+        {
+          "matches": ["<all_urls>"],
+          "js": ["assets/js/grab.js"]
+        }
+    ]
+}
